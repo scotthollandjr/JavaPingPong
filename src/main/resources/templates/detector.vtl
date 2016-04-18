@@ -1,0 +1,10 @@
+<h1> Ping Pong detector</h1>
+#if($divisibleBy15)
+  <h3 class="well">ping-pong</h3>
+#else if ($divisibleBy3)
+  <h3 class="well">ping</h3>
+#else if ($divisibleBy5)
+  <h3 class="well">pong</h3>
+#else
+  <h3 class="well">$</h3>
+#end
