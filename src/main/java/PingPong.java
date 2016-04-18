@@ -26,7 +26,6 @@ public class PingPong {
       Object PingPongGame = PingPongGame(integerNumber);
 
       model.put("PingPongGame", PingPongGame);
-      model.put("number", number);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
