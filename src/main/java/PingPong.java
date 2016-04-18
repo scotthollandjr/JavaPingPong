@@ -35,8 +35,12 @@ public class PingPong {
 
 
   public static Object PingPongGame(Integer integerNumber) {
-    if ( integerNumber % 3 == 0 ) {
+    if (integerNumber % 15 == 0) {
+      return "pingpong";
+    }else if ( integerNumber % 3 == 0 ) {
       return "ping";
+    } else if ( integerNumber % 5 == 0 ) {
+      return "pong";
     } else {
       return integerNumber;
     }
