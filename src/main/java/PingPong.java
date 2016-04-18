@@ -1,5 +1,6 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -35,14 +36,18 @@ public class PingPong {
 
 
   public static Object PingPongGame(Integer integerNumber) {
-    if (integerNumber % 15 == 0) {
-      return "pingpong";
-    }else if ( integerNumber % 3 == 0 ) {
-      return "ping";
-    } else if ( integerNumber % 5 == 0 ) {
-      return "pong";
-    } else {
-      return integerNumber;
+    ArrayList<Object> pingPongArray = new ArrayList<Object>();
+    for ( Integer counter = 1 ; counter <= integerNumber ; counter++ ) {
+      if (counter % 15 == 0) {
+        pingPongArray.add("pingpong");
+      } else if ( counter % 3 == 0 ) {
+        pingPongArray.add("ping");
+      } else if ( counter % 5 == 0 ) {
+        pingPongArray.add("pong");
+      } else {
+        pingPongArray.add(counter);
+      }
     }
+    return pingPongArray;
   }
 }
